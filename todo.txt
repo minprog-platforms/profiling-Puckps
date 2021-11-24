@@ -1,0 +1,23 @@
+is_solved:
+- deze duurde het langst van de functies die word geroepen door solve
+- de return value werd pas op het einde na alle checks gereturned, verder was het niet nodig om te kijken of alle cijfers er in stonden 
+- ik er voor gezorgd dat hij checkt of er geen 0 values meer zijn en als er al eentje is in de eerste test dat hij meteen false returned
+- het kost veel tijd om te checken of alle getallen er in zitten alles en overal, het heeft dus veel tijd gescheeld om dit niet meer te doen maar op zoek te gaan naar een 0.
+
+value_at:
+- deze functie wordt vaak aangeroepen en kan dus veel tijd schelen als deze vooruit gaat in tijd
+- hij kan veel makkelijker zonder loops en een enkele handeling
+- ik heb de alle loops der uitgehaald en gezorgd dat in 1 line her goede wordt gereturnd met behulp van de _grid functie
+- dit scheelt bijna de helft van de tijd doordat er geen loops meer in zitten die niet nodig zijn
+
+next_empty_index:
+- dit is een van de drie hoofd functies die aangeroepen word door solve, door deze te improveen word dit deel ook geoptimaliseerd
+- hoe de values gereturned worden kon volgens zonder tussen stapjes
+- ik heb deze tussen stapjes er uit gehaald 
+- het heeft de tijd bijna gehalveerd door deze kleine aanpassing
+
+options_at:
+- vooral bij een grote hoeveelheid aan moeilijke puzzels kost deze functie veel tijd, hiervoor moet een oplossing zijn
+- het is een functie die meerdere de zelfde soort dingen checkt en opnieuw het zelfde uitvoerd
+- ik heb de functie 3 kleinere functies laten aanroepen die ieder zijn eigen onder deel checkt op de opties aan values op hun gebied, vervolgens heb ik de hoofdfunctie al deze opties van elkaar geelimineerd.
+- bij een hoge hoeveelheid puzzels van hoog niveau scheelt dit extreem veel tijd.
